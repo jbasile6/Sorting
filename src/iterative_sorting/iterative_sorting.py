@@ -21,15 +21,17 @@ def selection_sort( arr ):
             #assign smallest num to the cur_index position
         arr[cur_index] = smallest_num
         
-
-
-
-
     return arr
+
+
 
 
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort( arr ):
+    for x in range(0, len(arr) - 1):
+        for y in range(0, len(arr) - 1 - x):
+            if arr[y] > arr[y+1]:
+                arr[y], arr[y+1] = arr[y+1], arr[y]
 
     return arr
 
