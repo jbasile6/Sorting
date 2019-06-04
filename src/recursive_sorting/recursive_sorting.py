@@ -27,14 +27,19 @@ def merge( arrA, arrB ):
             merged_arr[x] = arrB[b_index]
             b_index += 1
         
-    return print("MERGED ARRAY:", merged_arr)
+    return merged_arr
 
-merge([1,2,5], [4,8,9])
+print(merge([1,2,5], [4,8,9]))
 
 
 # TO-DO: implement the Merge Sort function below USING RECURSION
 def merge_sort( arr ):
     # TO-DO
+    # if the array length is larger than 1 split in half
+    if len(arr) <= 1:
+        return arr
+    else:
+        return merge_sort([x for x in arr[1:] if x <= arr[0]]) + [arr[0]] + merge_sort([y for y in arr[1:] if y > arr[0]])
 
     return arr
 
